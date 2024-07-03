@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicaNet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/114914685.png">
+</head>
+<body id="Home">
+  <header class="nav-container">
+    <nav class="navBar">
+      <img src="assets/Logo.png" alt="PikaNet Logo">
+
+      <div id="icon" class="icon">
+        <img src="assets/menu.png" alt="menu">
+      </div>
+      <ul id="menu-list" class="hidden">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#ourProfile">Our profile</a></li>
+        <li><a href="#Portofolio">Portofolio</a></li>
+        <li><a href="#contactUs">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner-container">
+      <div class="banner">
+        <img src="assets/Banner/Satelite.jpg" alt="Satelite Banner">
+      </div>
+      
+      <header class="banner-content">
+        <h1>PicaNet</h1>
+        <p>Hello <span id="isi">User</span>. selamat datang di PicaNet. <br> jaringan berkecepatan tinggi di indonesia</p>
+
+        <button>Daftar</button>
+      </header>
+    </section>
+    <section id="ourProfile" class="container-profile">
+      <div class="image-profile">
+        <img class="I" src="assets/Tower.jpg" alt="tower">
+        <img class="L" src="assets/antenna.jpg" alt="antenna">
+      </div>
+      <div class="content-profile">
+        <h1>Our Profile</h1>
+        <p>PicaNet. internet yang berkecepatan cepat di seluruh indonesia. <br>di dirikan pada tahun 2024. internet yang harga murah dan terjangkau <br>dengan pelayanan terbaik.</p>
+      </div>
+    </section>
+
+    <section id="Portofolio" class="portfolio-container">
+      <div class="content">
+        <h1>Portofolio</h1>
+        <h2>Internet Rumahan</h2>
+        <p>maraknya maju teknologi internet selalu di gunakan. <br> dan kami akan memperkenalkan produk kami <br> internet yang super cepat dan murah.</p>
+      </div>
+      <div class="content-img">
+        <img class="img-content" src="assets/hotel.jpg" alt="hotel">
+      </div>
+    </section>
+
+    <section id="contactUs" class="container-contactUs">
+      <div class="contactUs">
+        <h1>Contact Us</h1>
+        <div class="container-form">
+          <form id="inputForm">
+            <label for="Name">Name</label>
+            <input type="text" name="Name" id="Name" placeholder="Nama" required>
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" placeholder="Email" required>
+            <label for="lahir">Tanggal lahir</label>
+            <input type="date" name="lahir" id="Lahir">
+            <label for="kelamin">Jenis Kelamin</label>
+            <div class="kelamin">
+              <label for="cwok">laki-laki</label>
+              <input type="radio" name="kelamin" id="cwok" required>
+              <label for="">perempuan</label>
+              <input type="radio" name="kelamin" id="cwek" required>
+            </div>
+            <label for="pesan">Pesan</label>
+            <input type="text" name="pesan" id="pesan" placeholder="pesan" required>
+          </form>
+          <h3 id="info">Harap diisi</h3>
+          <button type="submit" onclick="tombol()">submit</button>
+        </div>
+      </div>
+      <div id="form" class="form off">
+        <p class="waktu"><b>current time : </b> <span id="waktu"></span> </p>
+        <p><b>Nama : </b> <span id="name">test</span> </p>
+        <p><b>Email : </b> <span id="email">test</span> </p>
+        <p><b>Tanggal lahir : </b> <span id="lahir">test</span> </p>
+        <p><b>jenis Kelamin : </b> <span id="kelamin">test</span> </p>
+        <p><b>Pesan : </b> <span id="Pesan">test</span> </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h1>create by adnan</h1>
+  </footer>
+</body>
+<script src="js/main.js"></script>
+</html>
