@@ -1,3 +1,13 @@
+// fungsi web baru dimulai input radio on
+document.addEventListener("DOMContentLoaded", () => {
+  const on = document.getElementById("cwok");
+
+  if (on) {
+    on.checked = true;
+  }
+});
+
+// fungsi untuk memunculkan nav responsive
 const menuIcon = document.getElementById("icon");
 const menuList = document.getElementById("menu-list");
 
@@ -5,6 +15,7 @@ menuIcon.addEventListener("click", () => {
   menuList.classList.toggle("hidden");
 });
 
+// buat ganti nama
 const isiNama = prompt('Name: ')
 const isi = document.getElementById('isi')
 
@@ -14,17 +25,19 @@ if(isiNama == "" || isiNama == null || isiNama == undefined){
     isi.innerHTML = isiNama
 }
 
+
+// menset waktu realtime
 const waktu = document.getElementById("waktu");
 let date = new Date();
 
 function hari(hariIndex) {
-  const day = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-  return day[hariIndex];
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return days[hariIndex];
 }
 
 function bulan(bulanIndex) {
-  const month = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-  return month[bulanIndex];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return months[bulanIndex];
 }
 
 const hariIndex = date.getDay();
@@ -37,38 +50,35 @@ const namaBulan = bulan(bulanIndex);
 
 const tahun = date.getFullYear();
 
-waktu.innerHTML = `${namaHari}, ${tanggal} ${namaBulan} ${tahun}`;
+waktu.innerHTML = `${namaHari}, ${tanggal}  ${namaBulan} ${tahun}`;
 
+// fungsi buat tombol contact
 function tombol() {
-    const form = document.getElementById('form')
-    const info = document.getElementById('info')
+  const form = document.getElementById("form");
+  const info = document.getElementById("info");
 
   const nama = document.getElementById("Name").value;
-  const email = document.getElementById("Email").value;
   const lahir = document.getElementById("Lahir").value;
   const pesan = document.getElementById("pesan").value;
 
   const formName = document.getElementById("name");
-  const formEmail = document.getElementById("email");
   const formLahir = document.getElementById("lahir");
   const formPesan = document.getElementById("Pesan");
-  const formKelamin = document.getElementById('kelamin')
-  
+  const formKelamin = document.getElementById("kelamin");
 
-  if (nama == "" || email == "" || lahir == '' || pesan == '') {
-    info.style.display = 'block'
+  if (nama == "" || lahir == "" || pesan == "") {
+    info.style.display = "block";
   } else {
-    info.style.display = 'none'
-      form.classList.toggle('off')
-      formName.innerHTML = nama;
-      formEmail.innerHTML = email;
-      formLahir.innerHTML = lahir;
-      formPesan.innerHTML = pesan;
-      let kelamin;
-      if (document.getElementById("cwok").checked) {
-        formKelamin.innerHTML = 'laki-laki'
-      } else if (document.getElementById("cwek").checked) {
-        formKelamin.innerHTML = 'perempuan'
-      }
+    info.style.display = "none";
+    form.classList.toggle("off");
+    formName.innerHTML = nama;
+    formLahir.innerHTML = lahir;
+    formPesan.innerHTML = pesan;
+    let kelamin;
+    if (document.getElementById("cwok").checked) {
+      formKelamin.innerHTML = "male";
+    } else if (document.getElementById("cwek").checked) {
+      formKelamin.innerHTML = "female";
+    }
   }
 }
