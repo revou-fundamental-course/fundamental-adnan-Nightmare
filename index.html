@@ -8,27 +8,30 @@
   <link rel="icon" href="assets/114914685.png">
 </head>
 <body id="Home">
+  <!-- bagian nav -->
   <header class="nav-container">
     <nav class="navBar">
       <img src="assets/Logo.png" alt="PikaNet Logo">
 
       <div id="icon" class="icon">
-        <img src="assets/menu.png" alt="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
       </div>
       <ul id="menu-list" class="hidden">
         <li><a href="#Home">Home</a></li>
-        <li><a href="#ourProfile">Our profile</a></li>
+        <li><a href="#ourProfile">Profile</a></li>
         <li><a href="#Portofolio">Portofolio</a></li>
         <li><a href="#contactUs">Contact us</a></li>
       </ul>
+      
     </nav>
   </header>
 
+  <!-- bagian main -->
   <main>
     <section class="banner-container">
-      <div class="banner">
-        <img src="assets/Banner/Satelite.jpg" alt="Satelite Banner">
-      </div>
+        <div class="banner" id="banner-slide">
+          <img id="slide1" src="assets/Banner/Satelite.jpg" alt="Satelite Banner">
+        </div>
       
       <header class="banner-content">
         <h1>PicaNet</h1>
@@ -61,40 +64,50 @@
 
     <section id="contactUs" class="container-contactUs">
       <div class="contactUs">
-        <h1>Contact Us</h1>
+        <h1>contact us</h1>
         <div class="container-form">
+          <div class="massage" id="info">
+            <h1>input cannot be empty!!</h1>
+          </div>
           <form id="inputForm">
-            <label for="Name">Name</label>
             <input type="text" name="Name" id="Name" placeholder="Nama" required>
-            <label for="Email">Email</label>
-            <input type="email" name="Email" id="Email" placeholder="Email" required>
-            <label for="lahir">Tanggal lahir</label>
             <input type="date" name="lahir" id="Lahir">
-            <label for="kelamin">Jenis Kelamin</label>
-            <div class="kelamin">
-              <label for="cwok">laki-laki</label>
-              <input type="radio" name="kelamin" id="cwok" required>
-              <label for="">perempuan</label>
-              <input type="radio" name="kelamin" id="cwek" required>
+            
+            <div name="kelamin" class="kelamin">
+              <label for="kelamin">Gender : </label>
+              <label for="cwok">male</label>
+              <input type="radio" name="cwok" id="cwok" required>
+              <label for="cwek">female</label>
+              <input type="radio" name="cwok" id="cwek" required>
             </div>
-            <label for="pesan">Pesan</label>
-            <input type="text" name="pesan" id="pesan" placeholder="pesan" required>
+            <textarea name="msg" id="pesan" class="pesan" placeholder="message"></textarea>
           </form>
-          <h3 id="info">Harap diisi</h3>
           <button type="submit" onclick="tombol()">submit</button>
         </div>
       </div>
       <div id="form" class="form off">
-        <p class="waktu"><b>current time : </b> <span id="waktu"></span> </p>
-        <p><b>Nama : </b> <span id="name">test</span> </p>
-        <p><b>Email : </b> <span id="email">test</span> </p>
-        <p><b>Tanggal lahir : </b> <span id="lahir">test</span> </p>
-        <p><b>jenis Kelamin : </b> <span id="kelamin">test</span> </p>
-        <p><b>Pesan : </b> <span id="Pesan">test</span> </p>
+        <div id="waktu" class="waktu">senin, 1/oktober/2009</div>
+        <div class="row">
+          <div class="label">name</div>
+          <div id="name" class="nama">adnan</div>
+        </div>
+        <div class="row">
+          <div class="label">birthday</div>
+          <div id="lahir" class="nama">adnan</div>
+        </div>
+        <div class="row">
+          <div class="label">gender</div>
+          <div id="kelamin" class="nama">adnan</div>
+        </div>
+        <div class="row">
+          <div class="label">message</div>
+          <div id="Pesan" class="nama">adnan</div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- bagian footer -->
   <footer>
     <h1>create by adnan</h1>
   </footer>
